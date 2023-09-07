@@ -1,0 +1,39 @@
+<section id="pregled">
+    <div class="pregled-traka">
+        <h1>Predloženi Filmovi</h1>
+    </div>
+    <div class="container">
+        <div class='glavniDio' *ngFor="let f of filmovi; trackBy:trackByFn">
+            <div class='lijeviDio'>
+                <img id="slika" [src]="posterTmdb + f.poster_putanja">
+            </div>
+            <div class='desniDio'>
+                <h1>{{f.naziv_filma}}</h1>
+                <div class='detalji'>
+                    <ul>
+                    <li id="listaGodina">{{f.datum_premijere.toString().split('T')[0].split('-')[0]}}</li>
+                    <li id="listaTrajanje">{{f.trajanje}} min</li>
+                    <li id="listaStatus">{{f.status}}</li>
+                    <li id="listaOcjena">{{f.ocjena.toFixed(1)}}/10</li>
+                    <li id="listaJezik">{{f.izvorni_jezik}}</li>
+                    </ul>
+                    <div class='radnja'>
+                    <p id="noviTagline">{{f.tagline}}</p>
+                    </div>
+                    <div class='radnja'>
+                    <p id="noviOpis">{{f.radnja}}</p>
+                    </div>
+                    <div class="linkovi">
+                        <div class="odobri">
+                            <a [routerLink]="['/filmoviPrijedlozi']" (click)="odobriFilm(f.id)">Odobri film</a>
+                        </div>
+                        <div class="odbij">
+                            <a [routerLink]="['/filmoviPrijedlozi']" (click)="obrisiFilm(f.id)">Odbij film</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

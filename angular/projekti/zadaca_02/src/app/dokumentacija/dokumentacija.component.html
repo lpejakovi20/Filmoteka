@@ -1,0 +1,246 @@
+<div id="container">
+    <div>
+      <label>Lovro Pejaković</label><br>
+      <a href="mailto:lpejakovi20@student.foi.hr">lpejakovi20@student.foi.hr</a><br>
+      <img src="">
+    </div>
+    
+    <h2>REST servis resursi</h2>
+    <table id="rest" border="1px">
+        <tr>
+            <th>Resurs<br>Parametri</th>
+            <th>GET<br>čitanje</th>
+            <th>POST<br>kreiranje</th>
+            <th>PUT<br>ažuriranje</th>
+            <th>DELETE<br>brisanje</th>
+        </tr>
+        <tr>
+            <td>api/korisnici</td>
+            <td>NAPRAVLJENO</td>
+            <td>Metoda nije dopuštena</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+        <tr>
+            <td>api/korisnici/(korime)</td>
+            <td>NAPRAVLJENO</td>
+            <td>Metoda nije dopuštena</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+        <tr>
+            <td>api/korisnici/(korime)/aktivacija</td>
+            <td>Nije trebalo implementirati</td>
+            <td>NAPRAVLJENO</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+        <tr>
+            <td>api/filmovi/?stranica=broj&brojFilmova=broj[&datum=datum][&zanr=idZanr][&naziv=dioNazivFilma][&sortiraj = [d | z | n]]</td>
+            <td class="djelomicno">Samo vraća sve filmove na osnovu parametra "odobren", ostatak nije implementiran</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+        <tr>
+            <td>api/filmovi/(id)</td>
+            <td>NAPRAVLJENO</td>
+            <td>Metoda nije dopuštena</td>
+            <td>NAPRAVLJENO</td>
+            <td>NAPRAVLJENO</td>
+        </tr>
+        <tr>
+            <td>api/zanr</td>
+            <td>NAPRAVLJENO</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+            <td>NAPRAVLJENO</td>
+        </tr>
+        <tr>
+            <td>api/zanr/(id)</td>
+            <td>NAPRAVLJENO</td>
+            <td>Metoda nije dopuštena</td>
+            <td>NAPRAVLJENO</td>
+            <td>NAPRAVLJENO</td>
+        </tr>
+        <tr>
+            <td>api/tmdb/zanr</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+        <tr>
+            <td>api/tmdb/filmovi/?kljucnaRijec=rijec1[,rijec2]&stranica=broj</td>
+            <td>NAPRAVLJENO</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+            <td>Nije trebalo implementirati</td>
+        </tr>
+    </table>
+    
+    <h2>APP pogledi</h2>
+    
+    <table border="1px" id="app">
+        <tr>
+            <th>Stranica/e</th>
+            <th>Razina implementacije</th>
+        </tr>
+        <tr>
+            <td>Početna</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+        <tr>
+            <td>Dokumentacija</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+        <tr>
+            <td>Registracija, prijava, odjava</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+        <tr>
+            <td>Profil</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+        <tr class="djelomicno">
+            <td>Filmovi pregled</td>
+            <td>Prikazuje sve odobrene filmove iz baze. Klikom na naziv filma odlazi se na stranicu koja sadrži detalje o odabranom filmu. Nije implementirano filtriranje niti sortiranje.</td>
+        </tr>
+        <tr class="djelomicno">
+            <td>Film</td>
+            <td>Implementirano sve osim poveznice na Galeriju slika.</td>
+        </tr>
+        <tr>
+            <td>Filmovi pretraživanje</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+        <tr class="nije-implementirano">
+            <td>Galerija slika</td>
+            <td>Nije implementirano</td>
+        </tr>
+        <tr class="nije-implementirano">
+            <td>Slika</td>
+            <td>Nije implementirano</td>
+        </tr>
+        <tr class="djelomicno">
+            <td>Filmovi prijedlozi</td>
+            <td>Implementirano sve osim preuzimanja i pohrane postera filma.</td>
+        </tr>
+        <tr>
+            <td>Žanrovi</td>
+            <td>U potpunosti implementirano</td>
+        </tr>
+    </table>
+    
+    <h2>Elementi 2. zadaće</h2>
+    
+    <table border="1px" id="druga-zadaca">
+        <tr>
+            <th>Opis zadatka</th>
+            <th>Obavljenost</th>
+        </tr>
+        <tr class="vrsta-zadatka">
+            <td colspan="2">Zadaci općenito</td>
+        </tr>
+        <tr>
+            <td>
+                Na stranicu dokumentacija kreirati tablicu u kojoj jasno pišu resursi iz prvog dijela (REST servis) su napravljene
+                , a koje nisu prema opisu tablice zadaće 1. Ako je nešto napravljeno dijelomično treba to jasno napisati koji dio 
+                je napravljen.
+            </td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Na stranicu dokumentacija kreirati tablicu u kojoj jasno pišu pogledi iz drugog dijela (APP) koji
+                su implementirani, a koje nisu prema opisu tablice zadaće 1. Ako je nešto napravljeno
+                dijelomično treba to jasno napisati koji dio je napravljen.
+            </td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>
+                Na stranicu dokumentacija kreirati tablicu po koracima (počevši od zadaci općenito) ovog dokumenta u kojoj jasno 
+                pišu elementi opisa 2 zadaće koji su napravljeni, koji nisu.
+            </td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>
+                U obje aplikacije složiti package.json tako da se sa npm start može pokrenuti pojedini server. Kod kreiranja start 
+                skripte obavezno definirati putanju na NODE_PATH gdje piše putanja do globalnih modula kako je to rađeno na 
+                predavanjima i vježbama. 
+            </td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Kod predavanja izbrisati svoje ključeve za TMDB servis iz konfiguracijske datoteke.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr class="vrsta-zadatka">
+            <td colspan="2">Zadaci REST servis</td>
+        </tr>
+        <tr>
+            <td>REST servis funkcionalno ostaje isti međutim potrebno je napraviti sljedeće izmjene: <br>
+                Da radi sa SQLite bazom podataka. <br>
+                Da koristi port koji se čita iz konfiguracijske datoteke pod nazivom: rest.port</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>REST servis može dodatno ima parameter kod resursa api/filmovi koji omogućuje dohvat samo odobrenih ili 
+                ne odobrenih filmova. </td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>REST servis ne korsiti više username i password već prima JWT i tako validira input. Varijanta sa username i 
+                password nosi manje bodova.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr class="vrsta-zadatka">
+            <td colspan="2">Zadaci Web aplikacija</td>
+        </tr>
+        <tr>
+            <td>Klijentski dio Web Aplikacije HTML, CSS i JS na strani klijenta prebaciti u Angular sa
+                TypeScript-om.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Informacije o portovima na servise koje koristi Angular aplikacija čita iz environment datoteke.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Dizajn treba prebaciti korištenjem Sass preprocesora u Sass ili Scss sintaksi. Čisti CSS ili bootstrap varijante 
+                nose 0 bodova.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Dodati reCaptcha v3 sustav na minimalno 3 obrazaca od kojih su obavezni: prijava, registracija i jedan po izboru.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Pozadinski dio web aplikacije poslužuje Angular web aplikaciju.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Pozadinski dio web aplikacije poslužuje dokumentaciju - moguće je dokumentaciju ugraditi u samu angular aplikaciju.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Pozadinski dio web aplikaciije nudi REST api podršku za klijentsku stranu sa resursima koji ne postoje u REST 
+                servisu npr. autentifikacija korisnika i generiranje JWT-a.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Pozadinski dio port se mora čitati iz konfiguracijske datoteke iz podatka: app.port</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Izbaciti TOTP i aktivaciju mailom kod prijave. Inicijalno mora postojati korisnik iz svake uloge koji nema TOTP i 
+                već je aktiviran i treba navesti podatke na stranici prijava radi lakšeg testiranja.</td>
+            <td>Obavljeno</td>
+        </tr>
+        <tr>
+            <td>Angular aplikacija smije direktno komunicirati sa REST servisom, ali mora obavezno slati JWT.</td>
+            <td>Obavljeno</td>
+        </tr>
+    </table>
+    <div>

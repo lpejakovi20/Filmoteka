@@ -1,0 +1,17 @@
+<a routerLink="/popis" (click)="putanja='popis'" class="logo">Filmoteka</a>
+<nav class="navigation">
+    <a routerLink="/popis" (click)="putanja='popis'">Popis filmova</a>
+    <a routerLink="/profil" (click)="putanja='profil'" *ngIf="uloga && uloga.uloga!=null" >Profil</a>
+    <a routerLink="/filmoviPregled" (click)="putanja='filmoviPregled'" *ngIf="uloga && uloga.uloga!=null">Filmovi pregled</a>
+    <a routerLink="/filmoviPrijedlozi" (click)="putanja='filmoviPrijedlozi'" *ngIf="uloga && uloga.uloga==1">Filmovi prijedlozi</a>
+    <a routerLink="/filmoviPretrazivanje" (click)="putanja='filmoviPretrazivanje'" *ngIf="uloga && uloga.uloga!=null">Filmovi pretraživanje</a>
+    <a routerLink="/zanrovi" (click)="putanja='zanrovi'" *ngIf="uloga && uloga.uloga==1">Žanrovi</a>
+    <a routerLink="/dokumentacija" (click)="putanja='dokumentacija'">Dokumentacija</a>
+    <a routerLink="/prijava" (click)="putanja='prijava'" *ngIf="uloga && uloga.uloga==null">Prijava</a>
+    <a routerLink="/registracija" (click)="putanja='registracija'" *ngIf="uloga && uloga.uloga==null">Registracija</a>
+    <a routerLink="/popis" (click)="odjaviSe()" *ngIf="uloga && uloga.uloga!=null">Odjava</a>
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>Lovro Pejaković &copy; 2022</footer>

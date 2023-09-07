@@ -1,0 +1,15 @@
+<section id="pregled">
+    <div *ngFor="let z of zanrovi">
+
+        <div class="pregled-traka" *ngIf="kolekcija[zanrovi.indexOf(z)] && kolekcija[zanrovi.indexOf(z)][1].length > 0">
+            <h1>{{z.naziv}}</h1>
+        </div>
+            <div class="container" *ngIf="kolekcija[zanrovi.indexOf(z)] && provjeri(z.id,kolekcija)">
+                <div class="film" *ngFor="let f of kolekcija[zanrovi.indexOf(z)][1]">
+                    <div class="slika">
+                        <img [src]="'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + f.poster_putanja">
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>

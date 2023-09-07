@@ -1,0 +1,15 @@
+<section id="pregled">
+    <div class="pregled-traka">
+        <h1>Pregled Filmova</h1>
+    </div>
+        <div class="container">
+            <div class="film" *ngFor="let f of filmovi">
+                <div class="slika">
+                    <img [src]="'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + f.poster_putanja">
+                </div>
+              <div class="link">
+                <a [routerLink]="['/detalji',f.id]" (click)="prikaziVise(f.id)">{{f.naziv_filma}}</a>
+              </div>
+            </div>
+        </div>
+</section>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="postojeciZanrovi">
+          <h2>Postojeći žanrovi</h2>
+    <table>
+      <tr><th>Naziv</th><th>Promjena naziva</th><th></th></tr>
+      <tr *ngFor="let z of zanrovi; trackBy:trackByFn">
+          <td [id]="'naziv'+z.id">{{z.naziv}}</td>
+          <td><input [id]="'zanr'+z.id" type="text"></td>
+          <td><button (click)="azurirajZanr(z.id)">Ažuriraj</button></td>
+      </tr>
+  </table><br>
+    </div>
+    
+    <div class="zanroviTMDB">
+      <h2 class="labela">Žanrovi s TMDB servisa</h2>
+      <div class="linkovi">
+      <button id='odobri' class="odobri" type='button' (click)="dodajUbazu()">Dodaj u bazu</button>
+      <button id='odbij' class="odbij" type='button' (click)="oznaciSve()" >Označi sve</button><br>
+      </div>
+      <div *ngFor="let z of zanroviTMDB" class="checkbox">
+       <input type="checkbox" id={{z.name}} [name]="'zanr'+z.id" value={{z.id}}>
+      <label [for]="'zanr'+z.id">{{z.name}}</label><br>
+  </div>
+    </div>
+    
+    <div class="ostalo">
+      <p id="poruka"></p>
+      <p id='unos'></p>
+      <p id='preskoceni'></p>
+  <button id='obrisi' type='button' (click)="obrisiZanrove()" >Obriši žanrove koji nemaju film</button><br>
+    </div>
+    
+  </div>
+
+<!--
+<p id="poruka"></p>
+<table border='1px'>
+    <tr><th>Naziv</th><th>Promjena naziva</th><th></th></tr>
+    <tr *ngFor="let z of zanrovi; trackBy:trackByFn">
+        <td [id]="'naziv'+z.id">{{z.naziv}}</td>
+        <td><input [id]="'zanr'+z.id" type="text"></td>
+        <td><button (click)="azurirajZanr(z.id)">Ažuriraj</button></td>
+    </tr>
+</table><br>
+<button id='obrisi' type='button' (click)="obrisiZanrove()" >Obriši žanrove koji nemaju film</button><br>
+<h2>Žanrovi s TMDB servisa</h2>
+<div>
+    <p id='unos'></p>
+    <p id='preskoceni'></p>
+</div><br>
+<button id='oznaci' type='button' (click)="oznaciSve()" >Označi sve</button><br>
+<div *ngFor="let z of zanroviTMDB">
+    <input type="checkbox" id={{z.name}} [name]="'zanr'+z.id" value={{z.id}}>
+    <label [for]="'zanr'+z.id">{{z.name}}</label><br>
+</div><br>
+<button id='dodaj' type='button' (click)="dodajUbazu()">Dodaj u bazu</button>
+-->

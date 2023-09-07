@@ -1,0 +1,54 @@
+#pregled {
+	max-width: 1170px;
+	margin: 30px auto;
+	width: 100%;
+}
+.pregled-traka {
+	width: 100%;
+	padding: 10px 20px;
+	background-color: #211d21;
+	border: 1px solid #161616;
+	h1 {
+		color: #dadada;
+		font-size: 1.3rem;
+		font-weight: 500;
+	}
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 35px;
+	margin: 20px 0px;
+}
+.film {
+	width: 100%;
+	height: 550px;
+	overflow: hidden;
+	background-color: #0e0e0e;
+	border: 1px solid #161616;
+	position: relative;
+	.slika {
+		width: 100%;
+		height: 80%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-position: top center;
+			object-fit: cover;
+		}
+	}
+}
+.link {
+	margin: 10px 0px 0 0;
+	text-align: center;
+	a {
+		font-size: 1.4rem;
+		font-weight: 400;
+		color: #dfe2db;
+		&:hover {
+			font-size: 1.6rem;
+			transition: all ease 0.3s;
+			color: #a50113;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+<h2>Filmovi s TMDB servisa</h2>
+
+<div class="container">
+    <div class="filterStranicenje">
+        <div class="stranicenje">
+            <button *ngIf="page && page>1"(click)="dohvatiFilmoveStranicenje(1)"><<<</button>
+            <button *ngIf="page && page>1" (click)="dohvatiFilmoveStranicenje(page-1)"><</button>
+            <button *ngIf="page && total_pages && (total_pages < 500 || total_pages == 500)" (click)="dohvatiFilmoveStranicenje(page)">{{page}}/{{total_pages}}</button>
+            <button *ngIf="page && total_pages && total_pages > 500" (click)="dohvatiFilmoveStranicenje(page)">{{page}}/500</button>
+            <button *ngIf="page && total_pages && total_pages > 500 && page<500" (click)="dohvatiFilmoveStranicenje(page+1)">></button>
+            <button *ngIf="page && total_pages && (total_pages < 500 || total_pages == 500) && page<total_pages" (click)="dohvatiFilmoveStranicenje(page+1)">></button>
+            <button *ngIf="page && total_pages && total_pages > 500 && page<500" (click)="dohvatiFilmoveStranicenje(500)">>>></button>
+            <button *ngIf="page && total_pages && (total_pages < 500 || total_pages == 500) && page<total_pages" (click)="dohvatiFilmoveStranicenje(total_pages)">>>></button>    
+        </div>
+        
+        <div class="filterDiv">
+            <label for="filter">Filter:</label>
+            <input type="text" name="filter" id="filter" placeholder="Kljucne rijeci" (keyup)="dohvatiFilmoveStranicenje(1)"><br>
+        </div>  
+    </div>
+
+        <table border="1px" class="table">
+    <tr><th>Id</th><th>Jezik</th><th>Naslov original</th><th>Naslov</th><th>Opis</th><th>Poster</th><th></th></tr>
+    <tr *ngFor="let f of filmovi; trackBy:trackByFn">
+        <td>{{f.id}}</td>
+        <td>{{f.originalni_jezik}}</td>
+        <td>{{f.naziv}}</td>
+        <td>{{f.originalni_naziv}}</td>
+        <td>{{f.opis}}</td>
+        <td><img [src]="posteri_putanja + f.poster_putanja" width='100' [alt]='f.naziv'/></td>
+        <td><button (click)="dodajUbazu(f.id)">Dodaj u bazu</button></td>
+    </tr>
+          
+          <tr *ngFor="let f of filmovi; trackBy:trackByFn">
+        <td>{{f.id}}</td>
+        <td>{{f.originalni_jezik}}</td>
+        <td>{{f.naziv}}</td>
+        <td>{{f.originalni_naziv}}</td>
+        <td>{{f.opis}}</td>
+        <td><img [src]="posteri_putanja + f.poster_putanja" width='100' [alt]='f.naziv'/></td>
+        <td><button (click)="dodajUbazu(f.id)">Dodaj u bazu</button></td>
+    </tr>
+          
+</table>
+</div>

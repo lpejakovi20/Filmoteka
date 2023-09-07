@@ -1,0 +1,138 @@
+h2 {
+	text-align: center;
+	padding: 20px 0;
+	color: #a50113;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: transparent;
+	float: left;
+	margin: 50px;
+}
+td {
+	padding: 0;
+	background-color: #fff !important;
+	padding: 8px;
+	line-height: 1.4;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+	input {
+		background-color: #fff !important;
+	}
+	button {
+		background-color: #fff !important;
+		&:hover {
+			background-color: #ccc !important;
+		}
+	}
+}
+th {
+	padding: 0;
+	text-align: center;
+	background-color: #fff !important;
+	padding: 8px;
+	line-height: 1.4;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+.container {
+	width: 90%;
+	margin: auto;
+	margin-top: 50px;
+}
+.stranicenje {
+	float: left;
+	margin-bottom: -30px;
+	button {
+		min-width: 50px;
+	}
+}
+.filterDiv {
+	float: left;
+	margin: 0px 0px 15px 75%;
+	label {
+		font-size: 1.7rem;
+		color: #a50113;
+		letter-spacing: 1px;
+		margin: 0px 10px 0px 0px;
+	}
+}
+.filterStranicenje {
+	margin: 60px;
+	width: 100%;
+}
+.zanroviTMDB {
+	float: left;
+	width: 400px;
+	text-align: center;
+	float: left;
+	margin-top: -20px;
+	.labela {
+		margin: 20px;
+		padding: 20px;
+	}
+}
+.postojeciZanrovi {
+	width: 400px;
+	display: table;
+	float: left;
+	h2 {
+		margin-bottom: -25px;
+	}
+}
+.linkovi {
+	margin: 20px 10px 60px 40px;
+	button {
+		color: #000;
+		text-decoration: none;
+		font-family: 'Montserrat', sans-serif;
+		border: 2px solid #fff;
+		padding: 10px 20px 10px 20px;
+		font-size: 12px;
+		text-align: center;
+		background-color: #fff;
+		font-weight: bold;
+		letter-spacing: 1px;
+		&:hover {
+			background-color: #ccc;
+		}
+	}
+}
+#obrisi {
+	color: #000;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	border: 2px solid #fff;
+	padding: 10px 20px 10px 20px;
+	font-size: 12px;
+	text-align: center;
+	background-color: #fff;
+	font-weight: bold;
+	letter-spacing: 1px;
+	&:hover {
+		background-color: #ccc;
+	}
+}
+.odobri {
+	float: left;
+	margin-right: 30px;
+}
+.odbij {
+	float: left;
+}
+.checkbox {
+	margin-top: 10px;
+	label {
+		color: #fff;
+		padding: 10px;
+	}
+}
+.ostalo {
+	width: 40%;
+	margin: 30px;
+	float: left;
+}
+p {
+	color: #fff;
+}

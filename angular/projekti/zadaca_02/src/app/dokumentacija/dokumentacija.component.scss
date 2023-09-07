@@ -1,0 +1,70 @@
+div {
+	label {
+		color: #a50113;
+	}
+	a {
+		color: #a50113;
+	}
+}
+#rest {
+	text-align: left;
+	th {
+		max-width: 255px;
+	}
+	td {
+		padding: 15px;
+	}
+}
+td {
+	max-width: 255px;
+}
+#app {
+	text-align: left;
+	td {
+		min-width: 500px;
+		padding: 15px;
+	}
+	th {
+		min-width: 500px;
+		padding: 15px;
+	}
+}
+.vrsta-zadatka {
+	text-align: center;
+    background-color: #ccc;
+    td {
+        font-size: 1.5rem;
+    }
+}
+#druga-zadaca {
+	th {
+		min-width: 500px;
+		padding: 10px;
+	}
+	td {
+		min-width: 500px;
+		padding: 10px;
+	}
+}
+table {
+	margin: auto;
+	margin-top: 50px;
+}
+h2 {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	color: #a50113;
+}
+.djelomicno {
+	background-color: #ff726f;
+}
+.nije-implementirano {
+	background-color: red;
+}
+#container {
+	width: 100%;
+	display: table;
+	height: 100%;
+	background-color: #fff;
+}
